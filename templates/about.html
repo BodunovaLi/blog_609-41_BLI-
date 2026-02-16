@@ -1,0 +1,17 @@
+{% extends "base_layout.html" %}
+{% block title%}About us{% endblock title %}
+{% block content %}
+<div class="content-about">
+    <h1>{{ header }}</h1>
+    <div class="information">
+        <p>Director: {{ director.name}}</p>
+        <p>Address: {{ address.0 }}, {{ address.1 }}, {{ address.2 }}, {{ address.3 }}</p>
+        <p>Staff: {{ staff.0 }}, {{ staff.1 }}, {{ staff.2 }}</p>
+    </div>
+
+</div>
+
+{% endblock content %}
+
+
+

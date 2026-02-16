@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.article-header {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.articles {
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+    column-gap: 85px;
+    row-gap: 35px;
+    justify-content: center;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.article__item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #ffffff;
+    width: 300px;
+    padding: 50px 30px;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.article__item h2 {
+    text-align: center;
+}
+
+.article__item time {
+    text-align: end;
+    color: #505050;
+}
+
+.article-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: #505050;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    padding: 0 32px;
+    border-bottom: 1px solid #eaeaea;
+    background: antiquewhite;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 36px;
+}
+
+.navelems {
+    display: flex;
+    gap: 50px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logout-form {
+    margin: 0;
+}
+
+body {
+    background-color: #fffcf6;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.content-about {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.article-detail-img {
+    height: 300px;
+}
+
+/* Центрируем форму */
+.form {
+    width: 380px;
+    margin: 120px auto;
+    padding: 40px 30px;
+    background: #e8dfcf; /* цвет под хедер */
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Заголовок внутри окна */
+.form h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* Django поля в <p> */
+.form p {
+    margin-bottom: 18px;
+}
+
+/* Лейблы */
+.form label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #444;
+}
+
+/* Инпуты */
+.form input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #c8bfae;
+    background: white;
+    font-size: 14px;
+}
+
+.form input:focus {
+    outline: none;
+    border: 1px solid #a68d60;
+}
+
+/* Кнопка */
+.form button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background: #a68d60;  /* под цвет логотипа */
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form button:hover {
+    background: #8c744a;
+}
+
+.nav-btn {
+    padding: 8px 14px;
+    border-radius: 10px;
+    border: 1px solid #c8bfae;
+    background: #fff;
+    color: #333;
+    font-weight: 600;
+    line-height: 1;
+    transition: 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-btn:hover {
+    background: #f3eadb;
+    color: #333;
+}
+
+.nav-btn--primary {
+    background: #a68d60;
+    border-color: #a68d60;
+    color: #fff;
+}
+
+.nav-btn--primary:hover {
+    background: #8c744a;
+    border-color: #8c744a;
+}
+
+.nav-btn--ghost {
+    background: transparent;
+}
+
+.form .helptext {
+    display: none;
+}
+
+.form ul {
+    display: none;
+}
+
+
+
