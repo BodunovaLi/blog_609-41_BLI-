@@ -10,7 +10,7 @@ def signup_view(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return HttpResponseRedirect('/homepage')
+            return HttpResponseRedirect('homepage')
     else:
         form = UserCreationForm()
 
@@ -25,7 +25,7 @@ def login_view(request):
             login(request, user)
             if 'next' in request.POST:
                 return HttpResponseRedirect(request.POST['next'])
-            return HttpResponseRedirect('/articles/')
+            return HttpResponseRedirect('homepage')
     else:
         form = AuthenticationForm()
     return render(request, 'accounts/login.html', {'form': form})
@@ -34,6 +34,6 @@ def login_view(request):
 def logout_view(request):
     if request.method == 'POST':
         logout(request)
-    return HttpResponseRedirect('/articles')
+    return HttpResponseRedirect('homepage')
 
 

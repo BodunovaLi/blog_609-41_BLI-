@@ -9,13 +9,12 @@
 <body>
 <header>
 <nav class="navbar">
-    <a href="{% url 'home' %}" class="brand">
+    <a href="{% url 'homepage' %}" class="brand">
         <img src="{% static 'img/logo.svg' %}" alt="Logo" class="logo">
     </a>
 
     <div class="navelems">
-        <a href="{% url 'home' %}">Главная</a>
-        <a href="{% url 'articles:article_list' %}">Статьи</a>
+        <a href="{% url 'homepage' %}">Главная</a>
         <a href="{% url 'about' %}">О нас</a>
     </div>
 
