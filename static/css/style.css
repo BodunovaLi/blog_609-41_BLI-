@@ -122,7 +122,7 @@ body {
     padding: 40px 30px;
     background: #e8dfcf; /* цвет под хедер */
     border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 /* Заголовок внутри окна */
@@ -165,7 +165,7 @@ body {
     width: 100%;
     padding: 10px;
     margin-top: 10px;
-    background: #a68d60;  /* под цвет логотипа */
+    background: #a68d60; /* под цвет логотипа */
     border: none;
     border-radius: 8px;
     color: white;
@@ -218,6 +218,30 @@ body {
 
 .form ul {
     display: none;
+}
+
+.create-elem{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.create-new {
+    padding: 10px;
+    width: 133px;
+    text-align: center;
+    border-radius: 8px;
+    background: #a68d60;
+    color: #fff;
+    position: relative;
+    top: 40px;
+    left: 63px;
+}
+
+.create-new:hover {
+    background: #8c744a;
+    border-color: #8c744a;
+    transition: 0.8s;
 }
 
 

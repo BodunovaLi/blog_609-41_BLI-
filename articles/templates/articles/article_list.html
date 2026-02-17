@@ -7,7 +7,7 @@
         {% for element in articles %}
         <div class="article__item">
             <h2>
-                <a href="{% url 'article_detail' slug=element.slug %}">
+                <a href="{% url 'articles:article_detail' slug=element.slug %}">
                     {{element.title}}
                 </a>
             </h2>
@@ -20,6 +20,14 @@
         </div>
         {% endfor %}
     </div>
+    {% if user.is_authenticated %}
+    <div class="create-elem">
+        <a href="{% url 'articles:article_new' %}" class="create-new">
+            Create article
+        </a>
+    </div>
+
+    {% endif %}
 </main>
 {% endblock content %}
 

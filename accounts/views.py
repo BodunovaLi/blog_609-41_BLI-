@@ -10,7 +10,7 @@ def signup_view(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return HttpResponseRedirect('/articles')
+            return HttpResponseRedirect('/homepage')
     else:
         form = UserCreationForm()
 
@@ -23,6 +23,8 @@ def login_view(request):
         if form.is_valid():
             user = form.get_user()
             login(request, user)
+            if 'next' in request.POST:
+                return HttpResponseRedirect(request.POST['next'])
             return HttpResponseRedirect('/articles/')
     else:
         form = AuthenticationForm()

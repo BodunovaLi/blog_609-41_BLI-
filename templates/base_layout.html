@@ -15,19 +15,19 @@
 
     <div class="navelems">
         <a href="{% url 'home' %}">Главная</a>
-        <a href="{% url 'article_list' %}">Статьи</a>
+        <a href="{% url 'articles:article_list' %}">Статьи</a>
         <a href="{% url 'about' %}">О нас</a>
     </div>
 
     <div class="nav-right">
         {% if user.is_authenticated %}
-            <form action="{% url 'logout' %}" method="post" class="logout-form">
+            <form action="{% url 'accounts:logout' %}" method="post" class="logout-form">
                 {% csrf_token %}
                 <button type="submit" class="nav-btn nav-btn--ghost">Logout</button>
             </form>
         {% else %}
-            <a href="{% url 'login' %}" class="nav-btn">Login</a>
-            <a href="{% url 'signup' %}" class="nav-btn nav-btn--primary">Signup</a>
+            <a href="{% url 'accounts:login' %}" class="nav-btn">Login</a>
+            <a href="{% url 'accounts:signup' %}" class="nav-btn nav-btn--primary">Signup</a>
         {% endif %}
     </div>
 </nav>

@@ -2,7 +2,7 @@
 {% block title%}Registration{% endblock title %}
 {% block content %}
 
-<form class="form" action="/accounts/signup/" method="post">
+<form class="form" action="{% url 'accounts:signup' %}" method="post">
     <h1>Signup</h1>
     {% csrf_token %}
     {{form}}
